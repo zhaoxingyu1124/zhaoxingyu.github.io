@@ -152,6 +152,77 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-基础知识" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/09/基础知识/">基础知识</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/09/基础知识/" class="archive-article-date">
+  	<time datetime="2019-10-09T04:20:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##java关键字<br>所谓关键字，就是被java语言赋予特定含义的单词，它的特点是字母全部小写。而且在一些高级的记事本或者开发工具中，关键字都会以有颜色的字体形式出现。<br>关键字以及其含义<br>abstract 表明类或者成员方法具有抽象属性<br>assert 断言，用来进行程序调试<br>boolean 基本数据类型之一，声明布尔类型的关键字<br>break 提前跳出一个块<br>byte 基本数据类型之一，字节类型<br>case 用在switch语句之中，表示其中的一个分支<br>catch 用在异常处理中，用来捕捉异常<br>char 基本数据类型之一，字符类型<br>class 声明一个类<br>const 保留关键字，没有具体含义<br>continue 回到一个块的开始处<br>default 默认，例如，用在switch语句中，表明一个默认的分支<br>do 用在do-while循环结构中<br>double 基本数据类型之一，双精度浮点数类型<br>else 用在条件语句中，表明当条件不成立时的分支<br>enum 枚举<br>extends 表明一个类型是另一个类型的子类型，这里常见的类型有类和接口<br>final 用来说明最终属性，表明一个类不能派生出子类，或者成员方法不能被覆盖，或者成员域的值不能被改变，用来定义常量<br>finally 用于处理异常情况，用来声明一个基本肯定会被执行到的语句块<br>float 基本数据类型之一，单精度浮点数类型<br>for 一种循环结构的引导词<br>goto 保留关键字，没有具体含义<br>if 条件语句的引导词<br>implements 表明一个类实现了给定的接口<br>import 表明要访问指定的类或包<br>instanceof 用来测试一个对象是否是指定类型的实例对象<br>int 基本数据类型之一，整数类型<br>interface 接口<br>long 基本数据类型之一，长整数类型<br>native 用来声明一个方法是由与计算机相关的语言（如C/C++/FORTRAN语言）实现的<br>new 用来创建新实例对象<br>package 包<br>private 一种访问控制方式：私用模式<br>protected 一种访问控制方式：保护模式<br>public 一种访问控制方式：共用模式<br>return 从成员方法中返回数据<br>short 基本数据类型之一,短整数类型<br>static 表明具有静态属性<br>strictfp 用来声明FP_strict（单精度或双精度浮点数）表达式遵循IEEE 754算术规范 [1]<br>super 表明当前对象的父类型的引用或者父类型的构造方法<br>switch 分支语句结构的引导词<br>synchronized 表明一段代码需要同步执行<br>this 指向当前实例对象的引用<br>throw 抛出一个异常<br>throws 声明在当前定义的成员方法中所有需要抛出的异常<br>transient 声明不用序列化的成员域<br>try 尝试一个可能抛出异常的程序块<br>void 声明当前成员方法没有返回值<br>volatile 表明两个或者多个变量必须同步地发生变化<br>while 用在循环结构中</p>
+<p>java标识符<br>标识符，就是用来给类，接口，方法，变量等起名的字符串序列。</p>
+<p>组成规则：</p>
+<p>英文大小写字母<br>数字字符<br>$和_<br>注意事项：</p>
+<p>不能以数字开头<br>不能是java中的关键字<br>要区分大小写<br>常用的标识符命名规范：</p>
+<p>见名知意，不论是包，类，或是方法和变量，最好按照其功能和作用起名，以免造成自己写的代码几天后连自己都不知道这是什么东西的窘境，方便他人就是方便自己！<br>包名通常用自己的公司域名加包的功能组合起来反写，例如com.xigua.dao这样的包名（不知道包是什么的可以网上查一下，其实就是文件夹，解决类名重名和方便管理）<br>类名命名是单词首字母大写，其余字母小写，如果是多个单词连起来的需要注意每个单词首字母都要大写，这类起名法通常叫做驼峰命名法。<br>方法名命名是首个单词全部小写，第二个起的单词首字母大写，其余字母小写。<br>变量是字母全部小写，如果有数字最好放在字母后面。<br>##数据类型<br>首先，Java是一种强类型语言，针对每种数据都提供了对应的数据类型。所有的数据在计算机中都是以二进制的形式存储的，而计算是以数据的二进制格式的补码进行计算的，正数的原码补码反码是同一个；负数的反码是对数值位进行取反，补码是在反码的数值上+1；如-100表示：1 1100100 其中最前面的1是符号位表示负值，后面的七位1100100是数值位表示100；</p>
+<p>数据的分类：</p>
+<p>基本数据类型<br>A:整数 占用字节数<br>byte 1<br>short 2<br>int 4<br>long 8<br>B:浮点数<br>float 4<br>double 8<br>C:字符<br>char 2<br>D:布尔<br>boolean 1<br>引用数据类型：类，接口，数组。<br>数据类型的默认转换：byte,short,char—&gt;int—&gt;long—&gt;float—&gt;double;<br>注意，这里的float虽然是4字节大小但排在了8字节的long前面，是因为float实际可以表示的数据范围要比long大</p>
+<p>数据类型的强制转换格式：<br>目标数据类型 变量名 = (目标数据类型) (被转换的数据);<br>强制转换可以将数据类型由大到小转换，但可能会损失精度，一般不建议使用</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/09/基础知识/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
